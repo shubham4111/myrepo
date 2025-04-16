@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: mywebdeployment
   labels:
-    app: myweb
+    app: myrepo
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: myweb
+      app: myrepo
   template:
     metadata:
       labels:
-        app: myweb
+        app: myrepo
     spec:
       containers:
-      - name: myweb
-        image: jaggarapup/b882-final
+      - name: myrepo
+        image: nginx
         ports:
         - containerPort: 8080
